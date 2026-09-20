@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多喜爱 - 全屋定制家具品牌与家居解决方案</title>
+    <meta name="description" content="多喜爱家居官网，专注全屋定制家具设计。提供衣柜、橱柜、书柜等定制方案，环保板材，时尚设计，满足个性化家居需求。">
+    <meta name="keywords" content="多喜爱, 全屋定制, 家具定制, 衣柜定制, 整体衣柜, 多喜爱家居">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e65100; /* 活力橙 */
+            --secondary-color: #ff9800;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f9f9f9;
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            margin-left: 5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #d84315;
+            border-color: #d84315;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/duohai/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--light-bg);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Product Showcase */
+        .product-showcase {
+            background-color: var(--white);
+        }
+
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            padding-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-category {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* About / Brand Story */
+        .about-section {
+            background-color: #fff3e0; /* Light orange tint */
+        }
+
+        .about-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+
+        .stat-item span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--white);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background-color: #eee;
+            z-index: 0;
+            display: block;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .step-item:hover .step-number {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding: 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: 70px;
+            }
+
+            .nav-menu {
+                display: none; /* In a real app, this would be a hamburger menu */
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-wrapper {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step-item {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                多喜爱<span>家居</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">首页</a></li>
+                    <li><a href="#products" class="nav-link">全屋定制</a></li>
+                    <li><a href="#about" class="nav-link">品牌故事</a></li>
+                    <li><a href="#process" class="nav-link">服务流程</a></li>
+                    <li><a href="#" class="nav-link">设计案例</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">免费设计</a>
+                <a href="#" class="btn btn-primary">在线咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>定义您的理想家居空间</h1>
+                    <p>多喜爱家居专注全屋定制家具，以环保板材和人性化设计，为千万家庭打造舒适、美观的居住环境。</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#products" class="btn btn-primary">探索产品系列</a>
+                        <a href="#about" class="btn btn-outline" style="color: white; border-color: white;">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-padding features">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">为什么选择多喜爱</h2>
+                    <p class="section-desc">我们致力于提供高品质、高环保标准的家具定制服务，让每一次选择都安心无忧。</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>环保健康</h3>
+                        <p>采用E0级环保板材，从源头把控甲醛释放，守护全家人的呼吸健康。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>时尚设计</h3>
+                        <p>紧跟国际家居流行趋势，提供多种风格搭配，满足个性化审美需求。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>精湛工艺</h3>
+                        <p>资深工匠团队，精细打磨每一个细节，确保家具经久耐用，品质卓越。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3>全屋定制</h3>
+                        <p>从玄关到卧室，从厨房到书房，提供一站式全屋空间解决方案。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="section-padding product-showcase">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">热门定制系列</h2>
+                    <p class="section-desc">精选多喜爱明星产品，满足不同空间的功能与美学需求。</p>
+                </div>
+
+                <div class="product-tabs">
+                    <button class="tab-btn active">全屋定制</button>
+                    <button class="tab-btn">实木系列</button>
+                    <button class="tab-btn">现代简约</button>
+                    <button class="tab-btn">法式轻奢</button>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/wardrobe1/600/400" alt="整墙衣柜定制">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">卧室空间</span>
+                            <h3 class="product-title">极简整墙衣柜定制</h3>
+                            <p class="product-desc">利用垂直空间，最大化收纳能力，搭配隐形拉手设计，简约而不简单。</p>
+                            <div class="product-footer">
+                                <span class="product-price">咨询价格</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.85rem;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/kitchen2/600/400" alt="现代厨房橱柜">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">厨房空间</span>
+                            <h3 class="product-title">现代轻奢厨房橱柜</h3>
+                            <p class="product-desc">定制L型或U型厨房布局，搭配石英石台面与高光柜门，提升烹饪幸福感。</p>
+                            <div class="product-footer">
+                                <span class="product-price">咨询价格</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.85rem;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/bookcase3/600/400" alt="定制书柜">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">书房空间</span>
+                            <h3 class="product-title">多功能定制书柜</h3>
+                            <p class="product-desc">集书架、办公桌与展示柜于一体，合理规划空间，打造高效学习工作区。</p>
+                            <div class="product-footer">
+                                <span class="product-price">咨询价格</span>
+                                <a href="#" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.85rem;">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center" style="margin-top: 50px;">
+                    <a href="#" class="btn btn-primary">查看所有产品系列</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding about-section">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/furniturefactory/800/600" alt="多喜爱家居工厂">
+                    </div>
+                    <div class="about-content">
+                        <h2>关于多喜爱家居</h2>
+                        <p>多喜爱家居（Duohai Home）深耕家具行业多年，始终坚持以“设计驱动生活，品质成就未来”为理念。我们不仅提供家具，更提供一种舒适、健康的生活方式。</p>
+                        <p>通过自主研发与数字化生产，我们能够快速响应市场需求，为客户提供从测量设计到生产安装的一站式服务，确保每一件产品都符合严苛的环保标准。</p>
+                        
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h4>15+</h4>
+                                <span>年行业经验</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>500+</h4>
+                                <span>设计案例</span>
+                            </div>
+                            <div class="stat-item">
+                                <h4>100%</h4>
+                                <span>环保承诺</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section-padding process">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">定制服务流程</h2>
+                    <p class="section-desc">简单四步，轻松拥有您的专属家具，省心更放心。</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">免费测量</h3>
+                        <p class="step-desc">预约设计师上门，免费测量房屋尺寸，了解您的需求。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">方案设计</h3>
+                        <p class="step-desc">根据空间特点，提供3D效果图与详细报价方案。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">生产安装</h3>
+                        <p class="step-desc">工厂标准化生产，专业团队上门安装，调试完毕。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">终身服务</h3>
+                        <p class="step-desc">提供完善的售后维护服务，让您无后顾之忧。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>多喜爱家居</h3>
+                    <p>专注全屋定制家具，为您提供环保、时尚、实用的家居解决方案。让家更有爱，让生活更美好。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">全屋定制</a></li>
+                        <li><a href="#">实木家具</a></li>
+                        <li><a href="#">软装配饰</a></li>
+                        <li><a href="#">智能家居</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">设计咨询</a></li>
+                        <li><a href="#">安装指南</a></li>
+                        <li><a href="#">保养维护</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li>全国服务热线：400-888-xxxx</li>
+                        <li>设计邮箱：design@duohai.com</li>
+                        <li>公司地址：中国家居产业园区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 多喜爱家居 版权所有 | 仅供演示用途</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
