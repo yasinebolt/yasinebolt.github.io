@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛2符文圣殿是游戏内高难度的地下城副本，主要挑战包括符文试炼、守护者试炼和精英怪。本站提供符文圣殿通关攻略、BOSS机制解析、队伍配置建议及掉落物品查询。">
+    <meta name="keywords" content="冒险岛2符文圣殿,冒险岛2副本攻略,符文圣殿BOSS,冒险岛2掉落,冒险岛2地下城">
+    <title>冒险岛2符文圣殿-高难度副本通关攻略与BOSS机制详解</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --secondary-color: #4b0082;
+            --accent-color: #ffd700;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-color: #333;
+            --font-stack: "Microsoft YaHei", "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(74, 0, 130, 0.9), rgba(18, 18, 18, 0.8)), url('https://picsum.photos/seed/maplestory2/1200/400') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .info-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Boss List */
+        .boss-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .boss-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .boss-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            filter: grayscale(20%);
+        }
+
+        .boss-info {
+            padding: 15px;
+        }
+
+        .boss-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tags span {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            background-color: rgba(138, 43, 226, 0.2);
+            color: var(--primary-color);
+            border-radius: 10px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        /* Guide Table */
+        .guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .guide-table th, .guide-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .guide-table th {
+            background-color: rgba(138, 43, 226, 0.1);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .guide-table tr:hover {
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .header-content { flex-direction: column; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                <span>Rune Temple</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">副本首页</a></li>
+                    <li><a href="#bosses">BOSS机制</a></li>
+                    <li><a href="#guide">通关攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>冒险岛2符文圣殿</h1>
+                <p>挑战神秘的符文之地，掌握元素力量。符文圣殿是冒险岛2中高等级玩家体验的核心副本，包含符文试炼与守护者试炼两个主要挑战。</p>
+                <a href="#guide" class="hero-btn">查看详细攻略</a>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-title">副本概览</div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>副本等级</h3>
+                    <p>建议等级：50级以上</p>
+                    <p>难度等级：困难</p>
+                    <p>推荐队伍：5人小队</p>
+                </article>
+                <article class="info-card">
+                    <h3>副本类型</h3>
+                    <p>限时地下城</p>
+                    <p>首领战</p>
+                    <p>元素试炼</p>
+                </article>
+                <article class="info-card">
+                    <h3>主要掉落</h3>
+                    <p>符文圣殿宝箱</p>
+                    <p>高级附魔材料</p>
+                    <p>传说级装备</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" id="bosses">
+            <div class="section-title">核心BOSS解析</div>
+            <div class="boss-list">
+                <div class="boss-card">
+                    <img src="https://picsum.photos/seed/boss1/400/300" alt="符文守护者" class="boss-img">
+                    <div class="boss-info">
+                        <h3>符文守护者</h3>
+                        <p>副本的首领，掌握着圣殿的核心力量。在战斗中会随机切换元素护盾，需队伍配合打破护盾。</p>
+                        <div class="tags">
+                            <span>物理抗性</span>
+                            <span>召唤物</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="boss-card">
+                    <img src="https://picsum.photos/seed/boss2/400/300" alt="虚空行者" class="boss-img">
+                    <div class="boss-info">
+                        <h3>虚空行者</h3>
+                        <p>潜伏在阴影中的怪物，擅长瞬移和范围AOE。战斗中会不断分裂出小怪，需优先清理。</p>
+                        <div class="tags">
+                            <span>瞬移</span>
+                            <span>高伤害</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="boss-card">
+                    <img src="https://picsum.photos/seed/boss3/400/300" alt="元素领主" class="boss-img">
+                    <div class="boss-info">
+                        <h3>元素领主</h3>
+                        <p>控制着冰、火、雷三种元素。场地会随战斗进程不断变化，玩家需时刻注意躲避环境伤害。</p>
+                        <div class="tags">
+                            <span>环境伤害</span>
+                            <span>控制技能</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="guide">
+            <div class="section-title">通关指南</div>
+            <table class="guide-table">
+                <thead>
+                    <tr>
+                        <th>阶段</th>
+                        <th>机制说明</th>
+                        <th>应对策略</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>入场阶段</strong></td>
+                        <td>圣殿大门被符文锁封锁，需要队伍同时激活四个符文柱。</td>
+                        <td>建议坦克职业站在柱子旁吸引仇恨，其他职业快速激活。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>符文试炼</strong></td>
+                        <td>场地出现随机颜色的符文圈，踩中会获得增益或受到持续伤害。</td>
+                        <td>观察BOSS技能提示，保持移动，不要长时间站在同一位置。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>守护者召唤</strong></td>
+                        <td>BOSS进入狂暴状态，召唤大量小怪保护自己。</td>
+                        <td>优先击杀小怪，注意保护治疗职业，避免减员。</td>
+                    </tr>
+                    <tr>
+                        <td><strong>最终决战</strong></td>
+                        <td>BOSS释放全屏大招，场地分裂为多个区域。</td>
+                        <td>分散站位，利用无敌技能或翻滚躲避致命伤害。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="container" id="faq">
+            <div class="section-title">常见问题 (FAQ)</div>
+            <div class="faq-item">
+                <div class="faq-question">符文圣殿每天可以进入几次？</div>
+                <div class="faq-answer">
+                    每个角色每天有3次进入符文圣殿的机会，使用通关券可以增加进入次数。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">什么职业适合这个副本？</div>
+                <div class="faq-answer">
+                    符文圣殿对职业搭配要求较高，建议配置1个坦克、2个输出、2个治疗。远程职业在躲避范围技能时更有优势。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">掉落的装备需要什么等级才能穿戴？</div>
+                <div class="faq-answer">
+                    符文圣殿掉落的传说级装备通常需要角色达到50级以上才能穿戴，且可能需要特定的职业才能装备。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 冒险岛2副本攻略站. 本站为玩家社区分享平台，所有游戏内容版权归Nexon所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
