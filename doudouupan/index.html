@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="豆豆U盘官方主页，提供高速USB3.2闪存盘选购指南、数据安全存储方案、容量对比及常见使用问题解答，帮助用户选择适合的数据存储设备。">
+    <meta name="keywords" content="豆豆u盘, 闪存盘, USB3.2, 数据存储, 移动硬盘, U盘选购指南">
+    <title>豆豆u盘-高速闪存存储与数据安全解决方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004c99;
+            --accent-color: #ff6b00;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-light: #f4f7f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2ff 0%, #ffffff 100%);
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(0, 102, 204, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,102,204,0.05) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Features */
+        .features {
+            background-color: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Product Showcase */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .product-img {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-specs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .spec-badge {
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--text-main);
+            color: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .btn-block:hover {
+            background: var(--primary-color);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: var(--white);
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        .guide-sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+        }
+
+        .guide-list a {
+            display: block;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .guide-list a:hover {
+            background: #eef4ff;
+            color: var(--primary-color);
+        }
+
+        .guide-content article {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .guide-content article:last-child {
+            border-bottom: none;
+        }
+
+        .guide-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .guide-content h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .guide-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .guide-content li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: var(--bg-light);
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background: #fafafa;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                豆豆<span>u盘</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#products" class="active">产品系列</a></li>
+                    <li><a href="#features">技术优势</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#products" class="cta-button">立即选购</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>高速闪存存储<br>数据安全无忧</h1>
+                    <div class="hero-tags">
+                        <span class="tag">USB 3.2 Gen 1</span>
+                        <span class="tag">AES 256加密</span>
+                        <span class="tag">工业级抗震</span>
+                    </div>
+                    <p>豆豆u盘采用最新闪存颗粒技术，提供高达 5GB/s 的读取速度。无论是日常办公文档、高清影视资料还是重要数据备份，豆豆u盘都能为您提供稳定、安全、便捷的存储解决方案。</p>
+                    <a href="#products" class="cta-button" style="display:inline-block; padding: 15px 40px; font-size: 1.1rem;">浏览产品系列</a>
+                </div>
+                <div class="hero-image">
+                    <div style="text-align:center; z-index:1;">
+                        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><polyline points="8 10 12 14 16 10"></polyline></svg>
+                        <h3 style="margin-top:10px; color:var(--text-main);">豆豆旗舰系列</h3>
+                        <p style="color:var(--text-secondary);">Type-C 接口 / 防水防尘</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section-padding features">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">为什么选择豆豆u盘</h2>
+                    <p class="section-subtitle">专为现代数据传输需求设计，品质与性能并存</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                        </div>
+                        <h3>极速传输</h3>
+                        <p>支持 USB 3.2 Gen 1 标准，提供稳定的高速读写体验，告别漫长等待。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3>数据加密</h3>
+                        <p>内置硬件级 AES-256 加密芯片，保护您的隐私数据不被泄露。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        </div>
+                        <h3>耐用防摔</h3>
+                        <p>采用航空级铝合金外壳，通过严格的跌落测试，适应各种恶劣环境。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                        </div>
+                        <h3>兼容广泛</h3>
+                        <p>兼容 Windows, Mac, Linux 及 Android 设备，Type-C 与 Micro-USB 双接口可选。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">热门产品系列</h2>
+                    <p class="section-subtitle">根据不同使用场景，为您提供多样化的选择</p>
+                </div>
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span style="font-size:3rem;">💾</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">豆豆经典 128G</h3>
+                            <div class="product-specs">
+                                <span class="spec-badge">USB 3.0</span>
+                                <span class="spec-badge">Type-A</span>
+                                <span class="spec-badge">约 90MB/s</span>
+                            </div>
+                            <span class="product-price">¥89.00</span>
+                            <a href="#" class="btn-block">查看详情</a>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span style="font-size:3rem;">💻</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">豆豆双接口 256G</h3>
+                            <div class="product-specs">
+                                <span class="spec-badge">USB 3.2</span>
+                                <span class="spec-badge">Type-C/Micro</span>
+                                <span class="spec-badge">约 200MB/s</span>
+                            </div>
+                            <span class="product-price">¥159.00</span>
+                            <a href="#" class="btn-block">查看详情</a>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span style="font-size:3rem;">🔒</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">豆豆加密 512G</h3>
+                            <div class="product-specs">
+                                <span class="spec-badge">硬件加密</span>
+                                <span class="spec-badge">Type-C</span>
+                                <span class="spec-badge">约 300MB/s</span>
+                            </div>
+                            <span class="product-price">¥299.00</span>
+                            <a href="#" class="btn-block">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide -->
+        <section id="guide" class="section-padding guide-section">
+            <div class="container guide-container">
+                <aside class="guide-sidebar">
+                    <h3>选购指南</h3>
+                    <ul class="guide-list">
+                        <li><a href="#guide-1">如何辨别真伪</a></li>
+                        <li><a href="#guide-2">接口类型选择</a></li>
+                        <li><a href="#guide-3">容量规划建议</a></li>
+                        <li><a href="#guide-4">数据恢复方法</a></li>
+                    </ul>
+                </aside>
+                <div class="guide-content">
+                    <article id="guide-1">
+                        <h2>如何辨别豆豆u盘真伪</h2>
+                        <p>购买豆豆u盘时，建议通过官方授权渠道或正规电商平台旗舰店购买。每支正品豆豆u盘均附带唯一的防伪标签，用户可通过包装上的二维码或产品序列号在官网查询验证真伪。</p>
+                        <ul>
+                            <li>检查包装印刷是否清晰，有无错别字。</li>
+                            <li>确认防伪标签是否完好，刮开涂层后查询。</li>
+                            <li>通过官方客服反馈的查询结果确认。</li>
+                        </ul>
+                    </article>
+                    <article id="guide-2">
+                        <h2>USB 接口类型如何选择</h2>
+                        <p>选择接口主要取决于您的使用设备：</p>
+                        <ul>
+                            <li><strong>Type-A 接口：</strong> 适用于台式机、笔记本（传统USB口），兼容性最广。</li>
+                            <li><strong>Type-C 接口：</strong> 适用于新款笔记本、平板电脑、手机（需OTG支持）。</li>
+                            <li><strong>双接口设计：</strong> 兼顾新旧设备，一插即用，适合商务人士。</li>
+                        </ul>
+                    </article>
+                    <article id="guide-3">
+                        <h2>容量规划与使用建议</h2>
+                        <p>选择容量时，请根据实际存储需求进行规划。一般建议留有 10%-20% 的冗余空间，以保证文件写入的稳定性和系统运行的流畅度。</p>
+                        <ul>
+                            <li><strong>办公文档：</strong> 32GB - 64GB 足够。</li>
+                            <li><strong>高清视频/照片：</strong> 128GB - 256GB 较为合适。</li>
+                            <li><strong>系统镜像/大型备份：</strong> 建议 512GB 或以上。</li>
+                        </ul>
+                    </article>
+                    <article id="guide-4">
+                        <h2>数据丢失后如何恢复</h2>
+                        <p>若不慎删除文件，请立即停止向u盘写入新数据。豆豆u盘支持专业的数据恢复软件（如 DiskGenius、Recuva 等），但恢复成功率取决于写入操作。建议定期使用杀毒软件扫描，预防病毒导致的数据丢失。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section-padding faq-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-subtitle">关于豆豆u盘的常见疑问</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            豆豆u盘支持在 Mac 电脑上使用吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            是的，豆豆u盘采用通用文件系统格式，完全支持 macOS、Windows 和 Linux 系统。部分加密型号可能需要配合官方驱动或 App 使用。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            写入速度慢是什么原因？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            速度受限于电脑的 USB 接口版本。如果是 USB 3.0 接口但速度只有 USB 2.0 水平，请检查接口是否插紧，或尝试更换电脑接口。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            产品保修期是多久？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            豆豆u盘提供 3 年质保服务（具体以购买页面说明为准）。非人为损坏的硬件故障可申请免费换新。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于豆豆</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">
+                        豆豆科技致力于提供高品质、高性价比的闪存存储解决方案，为全球用户提供安全、便捷的数据管理服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">办公系列</a></li>
+                        <li><a href="#">商务加密</a></li>
+                        <li><a href="#">游戏存储</a></li>
+                        <li><a href="#">车载U盘</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">使用手册</a></li>
+                        <li><a href="#">驱动下载</a></li>
+                        <li><a href="#">售后政策</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">知乎专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 豆豆科技 版权所有. 本站内容仅供参考，不作为购买依据。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+                              </html>
