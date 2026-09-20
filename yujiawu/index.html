@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="瑜珈舞专业门户，提供现代舞韵瑜伽、空中瑜伽及身心疗愈指南，包含课程体系、体式教学视频与练习注意事项。">
+    <meta name="keywords" content="瑜珈舞, 现代舞韵瑜伽, 空中瑜伽, 身心疗愈, 瑜伽教学">
+    <title>瑜珈舞-身心合一的现代律动与疗愈指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6B8E23;
+            --secondary-color: #F4A460;
+            --bg-color: #FAF9F6;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --accent-gradient: linear-gradient(135deg, #6B8E23 0%, #8FBC8F 100%);
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #556B2F;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background-image: url('https://picsum.photos/seed/yoga_dance/1920/1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(107, 142, 35, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Video Course Section */
+        .courses {
+            background-color: white;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: var(--bg-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .course-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .course-image {
+            height: 200px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .course-content {
+            padding: 25px;
+        }
+
+        .course-level {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .course-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .course-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: #FDFBF7;
+        }
+
+        .benefits-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .benefits-image {
+            position: relative;
+        }
+
+        .benefits-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .benefit-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(107, 142, 35, 0.2);
+            line-height: 1;
+        }
+
+        .benefit-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .benefit-text p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        details:hover {
+            border-color: var(--primary-color);
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            background-color: #fafafa;
+            list-style: none;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            background-color: #f0f4f0;
+            color: var(--primary-color);
+        }
+
+        .faq-content {
+            padding: 20px;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            background-color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C3E50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .benefits-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>✿</span> 瑜珈舞
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#courses">课程体系</a></li>
+                    <li><a href="#benefits">练习益处</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#courses" class="cta-button">开始练习</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>在律动中遇见更好的自己</h1>
+                <p>融合现代舞韵与瑜伽体式，释放身心压力，重塑优雅体态。专业的瑜珈舞教学指南，助您开启身心疗愈之旅。</p>
+                <a href="#courses" class="cta-button" style="background-color: white; color: var(--primary-color);">探索课程</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">💃</div>
+                        <h3>现代舞韵</h3>
+                        <p>打破传统瑜伽的静态，加入流畅的舞步与呼吸，让身体在音乐中自由舒展，体验动态平衡之美。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧘</div>
+                        <h3>身心疗愈</h3>
+                        <p>通过深度拉伸与冥想，缓解肩颈腰背疼痛，改善睡眠质量，调节情绪，找回内心的宁静。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <h3>塑形燃脂</h3>
+                        <p>高强度的体式转换与核心训练，在愉悦的音乐中高效燃烧卡路里，塑造紧致线条。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="section-padding courses">
+            <div class="container">
+                <div class="section-title">
+                    <h2>精选课程体系</h2>
+                    <p>从入门到进阶，全方位覆盖不同需求</p>
+                </div>
+                <div class="course-grid">
+                    <article class="course-card">
+                        <div class="course-image">
+                            <span class="course-tag">入门推荐</span>
+                            <img src="https://picsum.photos/seed/yoga_beginner/600/400" alt="初学者基础瑜珈舞">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-level">Level 1</span>
+                            <h3>初学者基础舞韵瑜伽</h3>
+                            <p>适合零基础学员，掌握基本的呼吸法与基础体式，学习如何将身体动作与音乐节奏自然融合。</p>
+                            <div class="course-meta">
+                                <span class="meta-item">⏱ 45分钟</span>
+                                <span class="meta-item">🔥 120千卡</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-image">
+                            <span class="course-tag">空中瑜伽</span>
+                            <img src="https://picsum.photos/seed/acro_yoga/600/400" alt="空中瑜珈舞">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-level">Level 2-3</span>
+                            <h3>空中瑜伽舞韵</h3>
+                            <p>利用吊床辅助完成倒立与翻转动作，在失重感中体验飞行的自由，增强核心力量与空间感。</p>
+                            <div class="course-meta">
+                                <span class="meta-item">⏱ 60分钟</span>
+                                <span class="meta-item">🔥 250千卡</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-image">
+                            <span class="course-tag">晨练</span>
+                            <img src="https://picsum.photos/seed/morning_yoga/600/400" alt="晨间唤醒瑜珈舞">
+                        </div>
+                        <div class="course-content">
+                            <span class="course-level">Level 2</span>
+                            <h3>晨间唤醒活力流</h3>
+                            <p>通过快速的串联动作唤醒全身细胞，提升代谢，为一天的工作与生活注入满满能量。</p>
+                            <div class="course-meta">
+                                <span class="meta-item">⏱ 30分钟</span>
+                                <span class="meta-item">🔥 180千卡</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="section-padding benefits">
+            <div class="container">
+                <div class="benefits-layout">
+                    <div class="benefits-text">
+                        <div class="section-title" style="text-align: left; margin-bottom: 20px;">
+                            <h2>为什么选择瑜珈舞？</h2>
+                            <p>超越单一运动的界限，创造独特的身心体验</p>
+                        </div>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-number">01</div>
+                                <div class="benefit-text">
+                                    <h4>提升柔韧性与协调性</h4>
+                                    <p>瑜伽的拉伸与舞蹈的律动相结合，显著改善关节活动范围，增强身体控制力。</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-number">02</div>
+                                <div class="benefit-text">
+                                    <h4>增强心肺功能</h4>
+                                    <p>结合有氧运动的节奏与瑜伽的呼吸控制，有效提升心肺耐力，促进血液循环。</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-number">03</div>
+                                <div class="benefit-text">
+                                    <h4>缓解心理压力</h4>
+                                    <p>在优美的音乐中专注当下，释放潜意识中的紧张与焦虑，获得情绪的释放与升华。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-image">
+                        <img src="https://picsum.photos/seed/dance_yoga_pose/800/600" alt="优雅的瑜珈舞体式展示">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于瑜珈舞练习的疑问与解答</p>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>我没有舞蹈基础可以学习瑜珈舞吗？</summary>
+                        <div class="faq-content">
+                            完全可以。瑜珈舞的核心在于呼吸与体式的配合，而非复杂的舞蹈技巧。我们的入门课程专门为零基础学员设计，重点在于引导您感受身体与音乐的连接，循序渐进地掌握动作要领。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>练习瑜珈舞需要准备什么装备？</summary>
+                        <div class="faq-content">
+                            基础装备包括一套舒适、有弹性的运动服（建议上衣紧身以便观察动作，裤子宽松方便抬腿），一双防滑的瑜伽垫。如果您选择空中瑜伽，还需要准备专业的吊床和护具。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>练习频率建议是多少？</summary>
+                        <div class="faq-content">
+                            初学者建议每周练习2-3次，每次45-60分钟，以避免肌肉过度疲劳。随着身体适应能力的提高，可以逐渐增加频率和强度。保持规律的练习比单次长时间运动更重要。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>练习过程中需要注意什么安全事项？</summary>
+                        <div class="faq-content">
+                            请务必在空腹或饭后2-3小时后练习，以免引起不适。如果在练习中出现头晕、恶心或关节刺痛，请立即停止并调整呼吸。建议在专业老师指导下进行，确保动作规范，避免拉伤。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        瑜珈舞致力于推广身心合一的练习理念，通过科学的课程体系，帮助更多人发现身体的潜能，享受健康快乐的生活方式。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">回到首页</a></li>
+                        <li><a href="#courses">在线课程</a></li>
+                        <li><a href="#benefits">练习指南</a></li>
+                        <li><a href="#faq">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@yogadance.com</li>
+                        <li>地址：北京市朝阳区健康大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 瑜珈舞指南. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
