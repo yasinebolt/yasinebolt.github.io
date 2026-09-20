@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险岛龙的传人技能 - 龙神职业深度解析与加点配装指南</title>
+    <meta name="description" content="本站提供冒险岛龙的传人（龙神）技能详解、职业定位分析、核心技能加点方案、装备搭配建议及实战连招技巧，助你打造最强龙神。">
+    <meta name="keywords" content="冒险岛龙的传人技能, 龙神加点, 冒险岛龙神攻略, 龙神配装, 冒险岛职业">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Layout Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Main Content Area */
+        .main-col {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        /* Skill Cards */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .skill-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #f0f2f5;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .guide-list li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .guide-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .guide-list span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Strategy Section */
+        .strategy-section {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .strategy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .strategy-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .strategy-item {
+            margin-bottom: 25px;
+        }
+
+        .strategy-item h4 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .strategy-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #d35400;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">
+            <span>⚔️</span> 冒险岛百科
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">职业首页</a></li>
+                <li><a href="#">技能详解</a></li>
+                <li><a href="#">加点攻略</a></li>
+                <li><a href="#">装备推荐</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>龙的传人技能</h1>
+        <p>驾驭上古龙魂的力量，体验极致的物理输出。掌握核心技能机制，制定专属加点方案，成为冒险岛中最耀眼的龙神。</p>
+    </div>
+</section>
+
+<main class="container">
+    <div class="content-grid">
+        <!-- Left Column -->
+        <div class="main-col">
+            <section>
+                <h2 class="section-title">核心技能解析</h2>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon">🐉</div>
+                        <h3 class="skill-name">龙魂爆发</h3>
+                        <p class="skill-desc">龙神的标志性技能，短时间内大幅提升攻击速度和移动速度，并使攻击附加龙魂伤害。释放时需注意技能冷却。</p>
+                        <span class="skill-tag">主动技能</span>
+                        <span class="skill-tag">爆发</span>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon">🔥</div>
+                        <h3 class="skill-name">龙之咆哮</h3>
+                        <p class="skill-desc">对前方扇形区域造成大量物理伤害，并具有击退效果。是清怪和打断怪物的利器。</p>
+                        <span class="skill-tag">主动技能</span>
+                        <span class="skill-tag">范围伤害</span>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h3 class="skill-name">龙之审判</h3>
+                        <p class="skill-desc">跳跃至空中释放强力下劈，造成巨额伤害。配合连跳技能可以打出更高的输出。</p>
+                        <span class="skill-tag">主动技能</span>
+                        <span class="skill-tag">高伤害</span>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-icon">🛡️</div>
+                        <h3 class="skill-name">龙之护甲</h3>
+                        <p class="skill-desc">短时间内获得护盾，减少受到的伤害，并提升自身的物理防御力。生存能力的关键技能。</p>
+                        <span class="skill-tag">主动技能</span>
+                        <span class="skill-tag">防御</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="strategy-section">
+                <h2 class="section-title">加点与配装策略</h2>
+                <div class="strategy-content">
+                    <div>
+                        <div class="strategy-item">
+                            <h4>1-30级：基础连招</h4>
+                            <p>初期重点投入龙之咆哮和龙之审判，保证前期练级效率。龙之护甲作为保命技能点满。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>30-100级：技能成型</h4>
+                            <p>随着等级提升，优先加满核心输出技能。龙魂爆发是持续输出的核心，必须保持满级状态。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>100级以上：终极形态</h4>
+                            <p>根据装备属性选择强化被动技能或特定主动技能。注重攻击力、攻击速度和暴击率的平衡。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="strategy-item">
+                            <h4>武器选择</h4>
+                            <p>推荐使用双手剑或巨剑，配合龙神的高攻击速度加成，可以触发更多的技能效果。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>戒指搭配</h4>
+                            <p>优先选择增加技能伤害、减少技能冷却时间的戒指，以提升技能释放频率。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>宠物选择</h4>
+                            <p>选择能够提供攻击力、暴击率或自动攻击的宠物，辅助龙神进行输出。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3>新手入门指南</h3>
+                <ul class="guide-list">
+                    <li>
+                        <a href="#">龙神职业定位</a>
+                        <span>物理DPS</span>
+                    </li>
+                    <li>
+                        <a href="#">转职任务流程</a>
+                        <span>详细步骤</span>
+                    </li>
+                    <li>
+                        <a href="#">属性点分配</a>
+                        <span>力量 vs 敏捷</span>
+                    </li>
+                    <li>
+                        <a href="#">技能重置方法</a>
+                        <span>使用技能书</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>热门副本推荐</h3>
+                <ul class="guide-list">
+                    <li>
+                        <a href="#">扎昆攻略</a>
+                        <span>BOSS机制</span>
+                    </li>
+                    <li>
+                        <a href="#">赫丽娜挑战</a>
+                        <span>装备获取</span>
+                    </li>
+                    <li>
+                        <a href="#">露娜娜岛</a>
+                        <span>日常任务</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-box" style="background-color: #fff3cd; border-color: #ffeeba;">
+                <h3 style="color: #856404;">注意事项</h3>
+                <p style="font-size: 0.9rem; color: #856404;">
+                    龙神虽然输出高，但技能前摇较长。在PK场或面对高频率攻击的BOSS时，需灵活使用位移技能。
+                </p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于冒险岛百科</h4>
+                <p>致力于为冒险岛玩家提供最全面、最及时的职业攻略和游戏资讯。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">职业大全</a></li>
+                    <li><a href="#">装备数据库</a></li>
+                    <li><a href="#">BOSS攻略</a></li>
+                    <li><a href="#">社区论坛</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>官方邮箱: support@maplestory-guide.com</li>
+                    <li>玩家QQ群: 123456789</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 冒险岛百科 - 龙神专区. All rights reserved. 本站内容仅供玩家参考，与Nexon无关。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
